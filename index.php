@@ -12,5 +12,5 @@ echo "Server load (1/5/15): " . $load[0] . "/" . $load[1] . "/" . $load[2] . " "
 echo "Region and Zone: " . "region-here" . " ";
 echo "----------------------------------------------"
 echo "All \$_SERVER variable at http://{$srv_name}/server.php", PHP_EOL;
-echo ".............................................." 
+echo ".............................................."; 
 ?>
