@@ -11,3 +11,6 @@ wget https://raw.githubusercontent.com/astianseb/sg-helper-scripts/refs/heads/ma
 META_REGION_STRING=$(curl "http://metadata.google.internal/computeMetadata/v1/instance/zone" -H "Metadata-Flavor: Google")
 REGION=`echo "$META_REGION_STRING" | awk -F/ '{print $4}'`
 sed -i "s|region-here|$REGION|" index.php
+a2enmod ssl
+a2ensite default-ssl
+systemctl restart apache2.service
